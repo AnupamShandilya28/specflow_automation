@@ -10,32 +10,7 @@ namespace specflow_automation.StepDefinitions
     public class EmployeeStepDefinitions
     {
         public string fname;
-        [Given(@"I have browser with orangehrm page")]
-        public void GivenIHaveBrowserWithOrangehrmPage()
-        {
-            // Console.WriteLine("orangehrm page");
-            AutomationHooks.driver = new ChromeDriver();
-            AutomationHooks.driver.Manage().Window.Maximize();
-            AutomationHooks.driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(20);
-            AutomationHooks.driver.Url = "https://opensource-demo.orangehrmlive.com/";
-        }
-        [When(@"I enter username as '([^']*)'")]
-        public void WhenIEnterUsernameAs(string admin)
-        {
-            AutomationHooks.driver.FindElement(By.Name("username")).SendKeys(admin);
-        }
-
-        [When(@"I enter password as '([^']*)'")]
-        public void WhenIEnterPasswordAs(string p0)
-        {
-            AutomationHooks.driver.FindElement(By.Name("password")).SendKeys(p0);
-        }
-
-        [When(@"I click on login")]
-        public void WhenIClickOnLogin()
-        {
-            AutomationHooks.driver.FindElement(By.CssSelector("button[Type=submit]")).Click();
-        }
+        
 
         [When(@"I click on PIM")]
         public void WhenIClickOnPIM()
