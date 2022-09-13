@@ -5,8 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+[assembly: CollectionBehavior(DisableTestParallelization = true)]
 namespace specflow_automation.Hooks
 {
+    [Binding]
     internal class AutomationHooks
     {
         public static IWebDriver driver;
